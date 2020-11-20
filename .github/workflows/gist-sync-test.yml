@@ -11,7 +11,7 @@ jobs:
         id: sync
         with:
           auth: ${{ secrets.GIST_TOKEN }}
-          gist_url: https://gist.github.com/andreygolik/49eb7dba7c85df554f2d6ccdf73bc797
+          gist_url: https://gist.github.com/andreygolik/2f380c5a8b7c48600cba8cfaf706b96e
           gist_title: test.txt
           gist_description: 'Gist Sync GitHub Action Test'
           github_file: test.txt
