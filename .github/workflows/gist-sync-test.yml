@@ -1,0 +1,17 @@
+on: [push]
+
+jobs:
+  gist-sync:
+    name: gist-sync
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - uses: andreygolik/gist-sync-action@master
+        id: sync
+        with:
+          auth: ${{ secrets.GIST_TOKEN }}
+          gist_url: https://gist.github.com/andreygolik/49eb7dba7c85df554f2d6ccdf73bc797
+          gist_title: test.txt
+          gist_description: 'Gist Sync GitHub Action Test'
+          github_file: test.txt
